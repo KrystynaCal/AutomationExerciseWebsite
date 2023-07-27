@@ -8,6 +8,7 @@ For this project, I will be using the following tools and technologies:
 - Selenium WebDriver v4.0 automation framework
 - JUnit
 - Maven
+- Hamcrest
 ---
 ## Test Cases
 On this website you can find defined test cases for practice. I will be following 

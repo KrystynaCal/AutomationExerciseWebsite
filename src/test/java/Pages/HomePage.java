@@ -11,22 +11,22 @@ public class HomePage {
 
     By SignupLoginButtonBy = By.cssSelector("a[href='/login']");
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void navigateToUrl(){
+    public void navigateToUrl() {
         driver.get(url);
     }
-    public void signupLoginButtonIsVisible(){
+
+    public void signupLoginButtonIsVisible() {
         WebElement SignupLoginButton = driver.findElement(SignupLoginButtonBy);
         Boolean Display = SignupLoginButton.isDisplayed();
         System.out.println("PageHome is Diplayed: " + Display);
     }
-    public void clickSignupLoginButton(){
+
+    public void clickSignupLoginButton() {
         WebElement SignupLoginButton = driver.findElement(SignupLoginButtonBy);
         SignupLoginButton.click();
     }
-
-
 }
