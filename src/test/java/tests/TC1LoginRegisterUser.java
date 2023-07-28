@@ -1,19 +1,9 @@
 package tests;
 
 import Pages.*;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TC1LoginRegisterUser {
-    WebDriver driver;
-
-    @Before
-    public void setup() {
-        driver = new ChromeDriver();
-    }
+public class TC1LoginRegisterUser extends BaseTest {
 
     @Test
     public void test1() {
@@ -34,12 +24,5 @@ public class TC1LoginRegisterUser {
         loggedInAsUserPage.deletedAccount(); //16. Verify that 'Logged in as username' is visible //17. Click 'Delete Account' button
         AccountDeletedPage accountDeletedPage = new AccountDeletedPage(driver);
         accountDeletedPage.checkAccountDeleted(); // 18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
-
-    }
-
-    @After
-    public void teardown() {
-        driver.close();
-        driver.quit();
     }
 }
